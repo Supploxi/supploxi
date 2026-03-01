@@ -1289,7 +1289,7 @@
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
     msgBox.className = 'hero-msg';
-    msgBox.style.display = 'none';
+    msgBox.textContent = '';
 
     try {
       const res = await fetch('/.netlify/functions/subscribe', {
@@ -1300,14 +1300,14 @@
       const data = await res.json();
 
       if (res.ok) {
-        msgBox.textContent = "You're on the list! We'll be in touch soon \u{1F389}";
+        msgBox.textContent = "You're on the list! We'll be in touch soon.";
         msgBox.className = 'hero-msg success';
         emailIn.value = '';
       } else {
         msgBox.textContent = data.error || 'Something went wrong. Please try again.';
         msgBox.className = 'hero-msg error';
       }
-    } catch {
+    } catch (err) {
       msgBox.textContent = 'Network error. Please try again.';
       msgBox.className = 'hero-msg error';
     } finally {
