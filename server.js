@@ -14,6 +14,11 @@ const MAILCHIMP_URL      = `https://${MAILCHIMP_SERVER}.api.mailchimp.com/3.0/li
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
+// ── GET /health ──
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 // ── POST /subscribe ──
 app.post('/subscribe', async (req, res) => {
   const { email } = req.body;
@@ -60,6 +65,10 @@ app.post('/subscribe', async (req, res) => {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+// ── Global error handlers ──
+process.on('uncaughtException', (err) => console.error('Uncaught:', err));
+process.on('unhandledRejection', (err) => console.error('Unhandled:', err));
 
 app.listen(PORT, () => {
   console.log(`Supploxi running on http://localhost:${PORT}`);
