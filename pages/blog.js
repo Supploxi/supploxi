@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -11,6 +12,7 @@ const articles = [
     categoryBg: 'rgba(0,212,170,0.15)',
     date: 'February 2026',
     preview: "With tariffs on Chinese goods reaching historic highs, US importers are rethinking their supply chains. Here's what you need to know to protect your margins and stay competitive.",
+    href: '/blog/section-301-tariffs-2026',
   },
   {
     title: 'The True Cost of Importing: A Complete Guide to Landed Cost',
@@ -19,6 +21,7 @@ const articles = [
     categoryBg: 'rgba(59,130,246,0.15)',
     date: 'January 2026',
     preview: "Most sellers only look at the product price. But your real cost includes freight, customs duties, insurance, and handling fees. Here's how to calculate it correctly every time.",
+    href: '/blog/true-cost-of-importing-landed-cost',
   },
   {
     title: "5 Signs You've Outgrown Your Spreadsheet",
@@ -27,6 +30,7 @@ const articles = [
     categoryBg: 'rgba(139,92,246,0.15)',
     date: 'December 2025',
     preview: "Spreadsheets are great — until they're not. If any of these signs sound familiar, it might be time for a dedicated operations platform.",
+    href: '/blog/5-signs-outgrown-spreadsheet',
   },
 ];
 
@@ -91,18 +95,6 @@ export default function Blog() {
           color: var(--text-muted);
           opacity: 0.3;
         }
-        .article-coming-badge {
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          padding: 4px 10px;
-          font-size: 11px;
-          font-weight: 600;
-          background: var(--surface);
-          border: 1px solid var(--border);
-          color: var(--text-muted);
-          border-radius: 6px;
-        }
         .article-body {
           padding: 24px;
           flex: 1;
@@ -145,13 +137,17 @@ export default function Blog() {
           padding: 8px 16px;
           font-size: 13px;
           font-weight: 600;
-          color: var(--text-muted);
+          color: var(--accent);
           background: none;
-          border: 1px solid var(--border);
+          border: 1px solid rgba(0,212,170,0.3);
           border-radius: 6px;
-          cursor: not-allowed;
-          opacity: 0.5;
+          cursor: pointer;
           align-self: flex-start;
+          transition: all 0.2s;
+        }
+        .read-more-btn:hover {
+          background: rgba(0,212,170,0.1);
+          border-color: var(--accent);
         }
         .subscribe {
           max-width: 520px;
@@ -242,7 +238,6 @@ export default function Blog() {
                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                   </svg>
-                  <span className="article-coming-badge">Coming Soon</span>
                 </div>
                 <div className="article-body">
                   <div className="article-meta">
@@ -251,14 +246,14 @@ export default function Blog() {
                   </div>
                   <h3>{a.title}</h3>
                   <p>{a.preview}</p>
-                  <button className="read-more-btn" disabled>Read More</button>
+                  <Link href={a.href} className="read-more-btn">Read More</Link>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="subscribe">
-            <h3>Get notified when we publish</h3>
+            <h3>Stay in the loop</h3>
             <p>No spam. Just practical insights for e-commerce importers.</p>
             {subscribed ? (
               <p className="subscribe-success">Thanks! We'll notify you when we publish.</p>
@@ -268,7 +263,7 @@ export default function Blog() {
                   <input type="email" className="subscribe-input" placeholder="you@example.com" />
                   <button className="subscribe-btn" onClick={() => setSubscribed(true)}>Subscribe</button>
                 </div>
-                <p className="subscribe-note">Articles coming soon — subscribe to be the first to know.</p>
+                <p className="subscribe-note">New articles published monthly.</p>
               </>
             )}
           </div>
