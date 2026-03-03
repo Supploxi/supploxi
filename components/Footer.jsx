@@ -1,15 +1,13 @@
 const footerLinks = {
   Product: [
-    { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'How it works', href: '#how-it-works' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'How it works', href: '/#how-it-works' },
     { label: 'Changelog', href: '/changelog' },
-    { label: 'Roadmap', href: '#', soon: true },
   ],
   Company: [
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Careers', href: '/careers', soon: true },
   ],
   Support: [
     { label: 'Documentation', href: '/docs' },
