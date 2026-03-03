@@ -314,7 +314,15 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="navbar-inner">
           <a href="/" className="logo">
-            <span className="logo-s">S</span>upploxi
+            <div style={{display:'flex', alignItems:'center', gap:'10px', padding: '0 4px'}}>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="28" height="28" rx="8" fill="#00d4aa" fillOpacity="0.15"/>
+                <path d="M8 10.5C8 9.12 9.12 8 10.5 8h3.5a3.5 3.5 0 0 1 0 7h-2a1.5 1.5 0 0 0 0 3H16a.5.5 0 0 1 0 1h-1.5A3.5 3.5 0 0 1 11 15.5h2a1.5 1.5 0 0 0 0-3h-2.5A2.5 2.5 0 0 1 8 10.5z" fill="#00d4aa"/>
+              </svg>
+              <span style={{fontSize:'18px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)', fontFamily:'Inter, sans-serif'}}>
+                Suppl<span style={{color:'#00d4aa'}}>o</span>xi
+              </span>
+            </div>
           </a>
 
           <div className="nav-links">
