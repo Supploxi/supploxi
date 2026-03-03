@@ -315,11 +315,13 @@ export default function Navbar() {
         <div className="navbar-inner">
           <a href="/" className="logo">
             <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="30" height="30" rx="8" fill="#00d4aa"/>
-                <text x="15" y="21" textAnchor="middle" fill="black" fontSize="16" fontWeight="800" fontFamily="Inter, sans-serif">S</text>
-              </svg>
-              <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)', fontFamily:'Inter, sans-serif'}}>
+              <div style={{
+                width:'30px', height:'30px', borderRadius:'8px', background:'#00d4aa',
+                display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0
+              }}>
+                <span style={{color:'#000000', fontSize:'16px', fontWeight:'900', fontFamily:'Inter, sans-serif', lineHeight:1}}>S</span>
+              </div>
+              <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)'}}>
                 Supploxi
               </span>
             </div>
