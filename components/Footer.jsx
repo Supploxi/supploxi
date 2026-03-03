@@ -139,9 +139,29 @@ export default function Footer() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <span className="logo">
-                <span className="logo-s">S</span>upploxi
-              </span>
+              <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'12px'}}>
+                <img
+                  src="/logo.png"
+                  alt="Supploxi"
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '8px',
+                    objectFit: 'cover',
+                    display: 'block',
+                    flexShrink: 0
+                  }}
+                />
+                <span style={{
+                  fontSize: '17px',
+                  fontWeight: '700',
+                  letterSpacing: '-0.03em',
+                  color: '#ffffff',
+                  fontFamily: 'Inter, sans-serif'
+                }}>
+                  Sup<span style={{color:'#00d4aa'}}>p</span>loxi
+                </span>
+              </div>
               <p className="footer-desc">
                 The operations platform for US e-commerce importers.
               </p>
