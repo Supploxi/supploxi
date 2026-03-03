@@ -2,20 +2,20 @@ const footerLinks = {
   Product: [
     { label: 'Features', href: '#features' },
     { label: 'Pricing', href: '#pricing' },
-    { label: 'Changelog', href: '#' },
+    { label: 'How it works', href: '#how-it-works' },
+    { label: 'Changelog', href: '/changelog' },
     { label: 'Roadmap', href: '#', soon: true },
   ],
   Company: [
-    { label: 'About', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Careers', href: '#', soon: true },
-    { label: 'Press', href: '#' },
+    { label: 'About', href: '/about' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Careers', href: '/careers', soon: true },
   ],
   Support: [
-    { label: 'Documentation', href: '#' },
+    { label: 'Documentation', href: '/docs' },
     { label: 'Contact', href: 'mailto:support@supploxi.com' },
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
   ],
 };
 
@@ -142,7 +142,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <span className="logo">
-                <span className="logo-s">S</span>uploxi
+                <span className="logo-s">S</span>upploxi
               </span>
               <p className="footer-desc">
                 The operations platform for US e-commerce importers.
@@ -177,8 +177,8 @@ export default function Footer() {
           <div className="footer-bottom">
             <p className="copyright">&copy; {new Date().getFullYear()} Supploxi. All rights reserved.</p>
             <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
             </div>
           </div>
         </div>

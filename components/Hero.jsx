@@ -350,14 +350,14 @@ export default function Hero() {
               </div>
 
               <h1>
-                Stop Managing<br />
-                Your Chinese<br />
-                Suppliers on<br />
-                <span>Spreadsheets.</span>
+                The Complete<br />
+                Operations Platform<br />
+                for E-Commerce<br />
+                <span>Sellers.</span>
               </h1>
 
               <p className="hero-sub">
-                Supploxi is the all-in-one operations platform for US e-commerce sellers who import from China. Track shipments automatically, calculate tariffs in real time, and never run out of stock again.
+                Supploxi brings together orders, suppliers, inventory, shipments, and financials in one place. Built for sellers who import from China and want full control of their business — without the spreadsheets.
               </p>
 
               <div className="social-proof">
