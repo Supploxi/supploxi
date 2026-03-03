@@ -313,17 +313,28 @@ export default function Navbar() {
 
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="navbar-inner">
-          <a href="/" className="logo">
-            <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
-              <img
-                src="/logo.png"
-                alt="Supploxi"
-                style={{width:'32px', height:'32px', borderRadius:'8px', objectFit:'contain'}}
-              />
-              <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)', fontFamily:'Inter, sans-serif'}}>
-                Suppl<span style={{color:'#00d4aa'}}>o</span>xi
-              </span>
-            </div>
+          <a href="/" style={{display:'flex', alignItems:'center', gap:'10px', textDecoration:'none'}}>
+            <img
+              src="/logo.png"
+              alt="Supploxi"
+              style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: '8px',
+                objectFit: 'cover',
+                display: 'block',
+                flexShrink: 0
+              }}
+            />
+            <span style={{
+              fontSize: '17px',
+              fontWeight: '700',
+              letterSpacing: '-0.03em',
+              color: '#ffffff',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              Suppl<span style={{color:'#00d4aa'}}>o</span>xi
+            </span>
           </a>
 
           <div className="nav-links">
