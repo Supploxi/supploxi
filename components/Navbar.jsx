@@ -333,7 +333,7 @@ export default function Navbar() {
               color: '#ffffff',
               fontFamily: 'Inter, sans-serif'
             }}>
-              Suppl<span style={{color:'#00d4aa'}}>o</span>xi
+              sup<span style={{color:'#00d4aa'}}>p</span>loxi
             </span>
           </a>
 
