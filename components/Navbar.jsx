@@ -315,14 +315,13 @@ export default function Navbar() {
         <div className="navbar-inner">
           <a href="/" className="logo">
             <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
-              <div style={{
-                width:'30px', height:'30px', borderRadius:'8px', background:'#00d4aa',
-                display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0
-              }}>
-                <span style={{color:'#000000', fontSize:'16px', fontWeight:'900', fontFamily:'Inter, sans-serif', lineHeight:1}}>S</span>
-              </div>
-              <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)'}}>
-                Supploxi
+              <img
+                src="/logo.png"
+                alt="Supploxi"
+                style={{width:'32px', height:'32px', borderRadius:'8px', objectFit:'cover'}}
+              />
+              <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)', fontFamily:'Inter, sans-serif'}}>
+                Suppl<span style={{color:'#00d4aa'}}>o</span>xi
               </span>
             </div>
           </a>
