@@ -318,10 +318,10 @@ export default function Navbar() {
               <img
                 src="/logo.png"
                 alt="Supploxi"
-                style={{width:'32px', height:'32px', borderRadius:'8px', objectFit:'cover'}}
+                style={{width:'32px', height:'32px', borderRadius:'8px', objectFit:'contain', background:'#00d4aa', padding:'2px'}}
               />
               <span style={{fontSize:'17px', fontWeight:'700', letterSpacing:'-0.03em', color:'var(--text)', fontFamily:'Inter, sans-serif'}}>
-                Suppl<span style={{color:'#00d4aa'}}>o</span>xi
+                Su<span style={{color:'#00d4aa'}}>pp</span>loxi
               </span>
             </div>
           </a>
