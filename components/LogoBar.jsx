@@ -75,16 +75,20 @@ export default function LogoBar() {
             <p className="logobar-title">Integrates with the tools you already use</p>
             <div className="logos">
               <div className="logo-item" style={{opacity: 0.6}}>
-                <img src="/images/shopify.png" alt="Shopify" style={{height: '36px', filter: 'brightness(0) invert(0.7)'}} />
+                <img src="/images/shopify.png" alt="Shopify" style={{height: '40px', objectFit: 'contain'}} />
                 <span className="logo-name">Shopify</span>
               </div>
               <div className="logo-item">
-                <img src="/images/woocommerce.png" alt="WooCommerce" style={{height: '36px', filter: 'brightness(0) invert(0.7)'}} />
+                <img src="/images/woocommerce.png" alt="WooCommerce" style={{height: '40px', objectFit: 'contain', opacity: 0.8}} />
                 <span className="logo-name">WooCommerce</span>
                 <span className="logo-soon">Coming Soon</span>
               </div>
               <div className="logo-item">
-                <img src="/images/bigcommerce.png" alt="BigCommerce" style={{height: '36px', filter: 'brightness(0) invert(0.7)'}} />
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
                 <span className="logo-name">BigCommerce</span>
                 <span className="logo-soon">Coming Soon</span>
               </div>
