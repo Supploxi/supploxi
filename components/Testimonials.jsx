@@ -1,41 +1,68 @@
-const testimonials = [
-  {
-    quote: 'I was managing 18 suppliers on a Google Sheet. Supploxi replaced my entire spreadsheet setup in one afternoon. The automatic tracking alone saves me 2 hours every week.',
-    name: 'Jason M.',
-    role: 'Sporting Goods Importer, Texas',
-    initials: 'JM',
-    color: '#60a5fa',
-  },
-  {
-    quote: "The tariff calculator is exactly what I needed. With Section 301 duties changing constantly, I finally know my real margins before I place an order.",
-    name: 'Sarah K.',
-    role: 'Home Decor Seller, California',
-    initials: 'SK',
-    color: '#f472b6',
-  },
-  {
-    quote: 'Setup took 20 minutes. Connected Shopify, added my 3 suppliers, and my first shipments were already being tracked. Incredibly clean interface.',
-    name: 'Mike R.',
-    role: 'Electronics Importer, Florida',
-    initials: 'MR',
-    color: '#00d4aa',
-  },
-];
-
 export default function Testimonials() {
+  const metrics = [
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+        </svg>
+      ),
+      value: 'Automatic',
+      desc: 'Shipment tracking — no manual checking',
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="4" y="2" width="16" height="20" rx="2" />
+          <line x1="8" y1="6" x2="16" y2="6" />
+          <line x1="16" y1="14" x2="16" y2="18" />
+          <line x1="8" y1="10" x2="8" y2="10" />
+          <line x1="12" y1="10" x2="12" y2="10" />
+          <line x1="16" y1="10" x2="16" y2="10" />
+          <line x1="8" y1="14" x2="8" y2="14" />
+          <line x1="12" y1="14" x2="12" y2="14" />
+          <line x1="8" y1="18" x2="8" y2="18" />
+          <line x1="12" y1="18" x2="12" y2="18" />
+        </svg>
+      ),
+      value: 'Real-time',
+      desc: 'Section 301 tariff calculations',
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
+        </svg>
+      ),
+      value: '14-day',
+      desc: 'Free trial, no credit card required',
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" />
+          <line x1="8" y1="21" x2="16" y2="21" />
+          <line x1="12" y1="17" x2="12" y2="21" />
+        </svg>
+      ),
+      value: 'One platform',
+      desc: 'Orders, suppliers, inventory, financials',
+    },
+  ];
+
   return (
     <>
       <style jsx>{`
-        .testimonials {
+        .metrics-section {
           background: var(--surface);
           border-top: 1px solid var(--border);
           border-bottom: 1px solid var(--border);
         }
-        .test-header {
+        .metrics-header {
           text-align: center;
           margin-bottom: 60px;
         }
-        .test-label {
+        .metrics-label {
           font-size: 13px;
           font-weight: 600;
           color: var(--accent);
@@ -43,114 +70,75 @@ export default function Testimonials() {
           letter-spacing: 1.5px;
           margin-bottom: 12px;
         }
-        .test-title {
+        .metrics-title {
           font-size: 40px;
           font-weight: 800;
           letter-spacing: -1px;
           margin-bottom: 16px;
         }
-        .test-sub {
+        .metrics-sub {
           font-size: 18px;
           color: var(--text-muted);
         }
-        .test-grid {
+        .metrics-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 24px;
+          max-width: 720px;
+          margin: 0 auto;
         }
-        .test-card {
+        .metric-card {
           background: var(--surface2);
           border: 1px solid var(--border);
           border-radius: 16px;
-          padding: 32px;
+          padding: 36px 32px;
           transition: all 0.3s;
         }
-        .test-card:hover {
-          border-color: rgba(255,255,255,0.1);
+        .metric-card:hover {
+          border-color: rgba(0,212,170,0.3);
           transform: translateY(-4px);
+          box-shadow: 0 16px 40px rgba(0,0,0,0.2);
         }
-        .quote-icon {
+        .metric-icon {
           color: var(--accent);
+          margin-bottom: 20px;
+        }
+        .metric-value {
           font-size: 32px;
-          line-height: 1;
-          margin-bottom: 16px;
-          opacity: 0.5;
+          font-weight: 800;
+          color: var(--accent);
+          letter-spacing: -0.5px;
+          margin-bottom: 8px;
         }
-        .test-quote {
+        .metric-desc {
           font-size: 15px;
-          line-height: 1.7;
-          color: var(--text-dim);
-          margin-bottom: 24px;
-        }
-        .test-author {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
-        .test-avatar {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 14px;
-          font-weight: 700;
-          color: #0a0c14;
-          flex-shrink: 0;
-        }
-        .test-info {
-          flex: 1;
-        }
-        .test-name {
-          font-size: 14px;
-          font-weight: 600;
-          color: var(--text);
-        }
-        .test-role {
-          font-size: 13px;
           color: var(--text-muted);
+          line-height: 1.5;
         }
-        .test-stars {
-          color: #fbbf24;
-          font-size: 14px;
-          letter-spacing: 2px;
-          margin-top: 4px;
-        }
-        @media (max-width: 1024px) {
-          .test-grid {
+        @media (max-width: 640px) {
+          .metrics-grid {
             grid-template-columns: 1fr;
-            max-width: 520px;
-            margin: 0 auto;
+            max-width: 400px;
           }
-        }
-        @media (max-width: 768px) {
-          .test-title {
+          .metrics-title {
             font-size: 30px;
           }
         }
       `}</style>
 
-      <section className="testimonials" id="testimonials">
+      <section className="metrics-section" id="testimonials">
         <div className="container">
-          <div className="test-header animate-on-scroll">
-            <p className="test-label">Testimonials</p>
-            <h2 className="test-title">Loved by importers across the US</h2>
-            <p className="test-sub">See why sellers trust Supploxi for their supply chain</p>
+          <div className="metrics-header animate-on-scroll">
+            <p className="metrics-label">Why Supploxi</p>
+            <h2 className="metrics-title">Built for serious importers</h2>
+            <p className="metrics-sub">Everything you need to run your import business — in one place.</p>
           </div>
-          <div className="test-grid">
-            {testimonials.map((t, i) => (
-              <div key={i} className="test-card animate-on-scroll">
-                <div className="quote-icon">&ldquo;</div>
-                <p className="test-quote">{t.quote}</p>
-                <div className="test-author">
-                  <div className="test-avatar" style={{ background: t.color }}>{t.initials}</div>
-                  <div className="test-info">
-                    <div className="test-name">{t.name}</div>
-                    <div className="test-role">{t.role}</div>
-                    <div className="test-stars">★★★★★</div>
-                  </div>
-                </div>
+          <div className="metrics-grid">
+            {metrics.map((m, i) => (
+              <div key={i} className="metric-card animate-on-scroll">
+                <div className="metric-icon">{m.icon}</div>
+                <div className="metric-value">{m.value}</div>
+                <div className="metric-desc">{m.desc}</div>
               </div>
             ))}
           </div>
