@@ -39,13 +39,18 @@ export default function LogoBar() {
         .logo-item:hover {
           opacity: 0.8;
         }
-        .logo-item svg {
-          height: 36px;
-          width: auto;
+        .logo-img-wrap {
+          height: 48px;
+          width: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .logo-item img {
-          height: 36px;
+        .logo-img-wrap img {
           width: auto;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
         }
         .logo-name {
           font-size: 14px;
@@ -75,16 +80,22 @@ export default function LogoBar() {
             <p className="logobar-title">Integrates with the tools you already use</p>
             <div className="logos">
               <div className="logo-item" style={{opacity: 0.6}}>
-                <img src="/images/shopify.png" alt="Shopify" style={{height: '36px', objectFit: 'contain', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                <div className="logo-img-wrap">
+                  <img src="/images/shopify.png" alt="Shopify" style={{height: '48px', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                </div>
                 <span className="logo-name">Shopify</span>
               </div>
               <div className="logo-item">
-                <img src="/images/woocommerce.png" alt="WooCommerce" style={{height: '36px', objectFit: 'contain', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                <div className="logo-img-wrap">
+                  <img src="/images/woocommerce.png" alt="WooCommerce" style={{height: '48px', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                </div>
                 <span className="logo-name">WooCommerce</span>
                 <span className="logo-soon">Coming Soon</span>
               </div>
               <div className="logo-item">
-                <img src="/images/bigcommerce.png" alt="BigCommerce" style={{height: '36px', objectFit: 'contain', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                <div className="logo-img-wrap">
+                  <img src="/images/bigcommerce.png" alt="BigCommerce" style={{height: '32px', filter: 'grayscale(1) brightness(0.8) invert(0.7)'}} />
+                </div>
                 <span className="logo-name">BigCommerce</span>
                 <span className="logo-soon">Coming Soon</span>
               </div>
